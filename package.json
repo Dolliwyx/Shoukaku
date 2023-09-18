@@ -17,7 +17,7 @@
     "build:ts": "tsup --config tsup-config.json",
     "build:docs": "typedoc --theme default --readme README.md --out docs/ --entryPointStrategy expand src/.",
     "lint": "eslint --fix --ext .ts",
-    "prepare": "npm run build:ts"
+    "prepublishOnly": "npm run build:ts"
   },
   "keywords": [
     "bot",
