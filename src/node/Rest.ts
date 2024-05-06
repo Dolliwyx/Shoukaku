@@ -115,13 +115,14 @@ export interface LavalinkPlayer {
     filters: FilterOptions
 }
 
-export interface UpdatePlayerOptions {
+export interface UpdatePlayerTrackOptions {
     encoded?: string|null;
-    /**
-    * @deprecated this may not work in newer lavalink versions, use "encoded" instead
-    */
-    encodedTrack?: string|null;
     identifier?: string;
+    userData?: unknown;
+}
+
+export interface UpdatePlayerOptions {
+    track?: UpdatePlayerTrackOptions;
     position?: number;
     endTime?: number;
     volume?: number;
